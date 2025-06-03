@@ -463,7 +463,7 @@ class ALManager:
         k = 0
         if not os.path.exists(os.path.join(args.result_dir, f'1_ds_graph_llm_annotated_output_{args.seed}_{args.known_cls_ratio}_{epoch}.json')):
             self.logger.info(f'1_ds_graph_llm_annotated_output_{args.seed}_{args.known_cls_ratio}_{epoch}.json')
-            # os.makedirs(os.path.dirname(os.path.join(args.result_dir, f'1_ds_graph_llm_annotated_output_{args.seed}_{args.known_cls_ratio}_{epoch}.json')), exist_ok=True)
+            os.makedirs(os.path.dirname(os.path.join(args.result_dir, f'1_ds_graph_llm_annotated_output_{args.seed}_{args.known_cls_ratio}_{epoch}.json')), exist_ok=True)
             
             self.logger.info('Start LLM labeling ...')
       
