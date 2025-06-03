@@ -8,7 +8,7 @@ uncertainty_neighbour_num: 25
 rho: 0.1
 
 num_pretrain_epochs: 100
-num_train_epochs: 150
+num_train_epochs: 120
 
 embed_feat_dim: 768
 head_feat_dim: 120
