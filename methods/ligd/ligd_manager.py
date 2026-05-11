@@ -814,7 +814,7 @@ class ALManager:
             if len(unc_neighbors_ori_inds[i]) >0:
                 for j, neighbor_ori_ind in enumerate(unc_neighbors_ori_inds[i]):
                     assert len(unc_neighbors_ori_inds[i]) == len(unc_neighbors_labs[i])
-                    self.llm_labels[neighbor_ori_ind] = unc_neighbors_labs[i][j]
+                    self.llm_labels[neighbor_ori_ind] = llm_pred_cluster_id
         
         self.logger.info('Num of labels after LLM predicted: %s', str(k))
         self.logger.info('Num of labeled examples after LLM predicted: %s', str(len(np.where(self.llm_labels != -1)[0])))
